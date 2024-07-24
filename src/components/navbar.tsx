@@ -96,7 +96,7 @@ const DATA = {
 export function Navbar() {
   const pathname = usePathname();
   return (
-    <div className="relative flex h-auto w-full items-center pb-7 justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+    <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 flex h-auto w-auto items-center justify-center overflow-hidden rounded-lg bg-background shadow-xl">
       <TooltipProvider>
         <Dock direction="middle">
           {DATA.navbar.map((item) => (

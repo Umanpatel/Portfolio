@@ -28,8 +28,6 @@ interface Props {
   className?: string;
 }
 
-
-
 export function ProjectCard({
   title,
   href,
@@ -45,7 +43,7 @@ export function ProjectCard({
   return (
     <Card
       className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-transform duration-300 ease-in-out transform hover:-translate-y-2 h-full"
+        "flex flex-col overflow-hidden border-4 hover:shadow-lg transition-transform duration-300 ease-in-out transform hover:-translate-y-2 h-full"
       }
       id="projects"
     >
@@ -78,7 +76,7 @@ export function ProjectCard({
           <div className="mt-2 flex flex-wrap gap-1">
             {tags?.map((tag) => (
               <Badge
-                className="px-1 py-0 text-[13px] "
+                className="px-1 py-0 text-[13px] bg-gradient-to-r from-sky-900 to-violet-800"
                 variant="secondary"
                 key={tag}
               >

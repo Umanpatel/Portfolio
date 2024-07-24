@@ -17,6 +17,10 @@ import { DATA } from "@/data/resume_contents";
 import Markdown from "react-markdown";
 import { ResumeCard } from "@/components/resume-card";
 import { ProjectCard } from "@/components/project-card";
+import { Badge } from "@/components/ui/badge";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Navbar } from "@/components/navbar";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -109,24 +113,11 @@ const items = [
 
 
 export default function Home() {
-
-  
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between pt-20 pl-5 pr-7 light:bg-white">
-      <section id="header">
+    <main className="flex min-h-screen w-full items-center justify-center flex-col pt-20 pl-5 pr-7 light:bg-white">
+      <section id="header" className="w-full max-w-4xl">
         <div className="flex flex-row gap-5 items-center">
           <div>
-            {/* <Image
-              src="/profile1.jpeg" // Path relative to the 'public' directory
-              alt=""
-              width={110}
-              height={110}
-              className="max-w-xs sm:max-w-sm rounded-full"
-            /> */}
-            {/* <Avatar className="w-28 h-28 lg:w-32 lg:h-32">
-              <AvatarImage src="/profile1.jpeg" />
-              <AvatarFallback className="max-w-xs sm:max-w-sm rounded-full">UP</AvatarFallback>
-            </Avatar> */}
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
@@ -134,30 +125,13 @@ export default function Home() {
               </Avatar>
             </BlurFade>
           </div>
-          {/* <Avatar className="w-28 h-28 lg:w-32 lg:h-32">
-            <AvatarImage src="/profile1.jpeg" />
-            <AvatarFallback className="max-w-xs sm:max-w-sm rounded-full">CN</AvatarFallback>
-          </Avatar> */}
           <section id="about">
-            {/* <BlurFadeText
-              delay={BLUR_FADE_DELAY}
-              className="text-2xl font-bold pb-3 tracking-tighter sm:text-3xl xl:text-3xl/none"
-              yOffset={8}
-              text={` Hi👋, I'm Umang`}
-            /> */}
-            <TypewriterEffectSmoothDemo/>
-            {/* <BlurFade delay={0.25 * 2} inView>
-              <span className="text-sm text-pretty sm:text-2xl xl:text-2xl/none">
-                I craft impactful software solutions, turning ideas into code.
-                Programming isn't about what you know; it's about what you can figure out.
-                There is always one more bug to fix.
-              </span>
-            </BlurFade> */}
+            <TypewriterEffectSmoothDemo />
             <BlurFadeText
-                className="text-sm text-pretty sm:text-2xl xl:text-2xl/none"
-                delay={BLUR_FADE_DELAY}
-                text={DATA.description}
-              />
+              className="text-sm text-pretty sm:text-2xl xl:text-2xl/none"
+              delay={BLUR_FADE_DELAY}
+              text={DATA.description}
+            />
           </section>
         </div>
         <div className="flex flex-col gap-1 lg:gap-5 pt-5 lg:pt-10">
@@ -167,25 +141,17 @@ export default function Home() {
             yOffset={8}
             text={`About Me`}
           />
-          {/* <BlurFade delay={0.40 * 2} inView>
-            <span className="text-sm text-pretty sm:text-2xl xl:text-2xl/none">
-              Namaste! Hello! Bonjour! I'm from the vibrant heart of Gujarat, India, and I'm currently residing in Toronto, ON, Canada.
-              As a passionate full-stack developer, I am dedicated to delivering high-quality and user-friendly software solutions.
-              My deep connection to nature, love for music, and excitement for the world of games inspire my work.
-              I blend my technical expertise with creativity, exploring new strategies and rhythms to drive my innovative journey.
-            </span>
-          </BlurFade> */}
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="text-sm text-pretty sm:text-2xl xl:text-2xl/none">
-            {DATA.summary}
-          </Markdown>
-        </BlurFade>
+            <Markdown className="text-sm text-pretty sm:text-2xl xl:text-2xl/none">
+              {DATA.summary}
+            </Markdown>
+          </BlurFade>
         </div>
       </section>
-      <section id="work">
+      <section id="work" className="w-full max-w-4xl">
         <div className="flex min-h-0 flex-col gap-y-3 pt-5">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-2xl font-bold">⚙️ Work Experience</h2>
+            <h2 className="text-2xl font-bold">Work Experience</h2>
           </BlurFade>
           {DATA.work.map((work, id) => (
             <BlurFade
@@ -206,7 +172,44 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section id="projects">
+      <section id="education" className="w-full max-w-4xl">
+        <div className="flex min-h-0 flex-col gap-y-3 pt-5 pb-5">
+          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+            <h2 className="text-2xl font-bold">🧑‍🎓 Education</h2>
+          </BlurFade>
+          {DATA.education.map((education, id) => (
+            <BlurFade
+              key={education.school}
+              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+            >
+              <ResumeCard
+                key={education.school}
+                href={education.href}
+                logoUrl={education.logoUrl}
+                altText={education.school}
+                title={education.school}
+                subtitle={education.degree}
+                period={`${education.start} - ${education.end}`}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section>
+      <section id="skills" className="w-full max-w-4xl">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+            <h2 className="text-xl font-bold">Skills</h2>
+          </BlurFade>
+          <div className="flex flex-wrap gap-1">
+            {DATA.skills.map((skill, id) => (
+              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                <Badge key={skill}>{skill}</Badge>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section id="projects" className="w-full max-w-4xl">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -228,7 +231,7 @@ export default function Home() {
               <BlurFade
                 key={project.title}
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-              > 
+              >
                 <ProjectCard
                   href={project.href}
                   key={project.title}
@@ -244,10 +247,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <h2>3D card Effect Component Aceternity</h2>
-      <h2>Bento grid component aceternity for projects </h2>
-      {/* <BentoGridDemo/> */}
-      <h2>Tracing beams</h2>
+      <Analytics />
+      <SpeedInsights />
+      <Navbar />
     </main>
   );
 }
+
