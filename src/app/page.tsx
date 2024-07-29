@@ -1,6 +1,5 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid"
@@ -18,9 +17,8 @@ import Markdown from "react-markdown";
 import { ResumeCard } from "@/components/resume-card";
 import { ProjectCard } from "@/components/project-card";
 import { Badge } from "@/components/ui/badge";
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Navbar } from "@/components/navbar";
+
+import Link from "next/link";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -38,9 +36,9 @@ export function TypewriterEffectSmoothDemo() {
     {
       text: "Umang",
     },
-    
+
   ];
-  return(
+  return (
     <TypewriterEffectSmooth words={words} />
   );
 }
@@ -66,7 +64,7 @@ const Skeleton = () => (
 );
 const items = [
   {
-    image:"/ReactRooks.png",
+    image: "/ReactRooks.png",
     title: "React Rooks",
     description: "React Rooks is a web-based chess game that allows users to play against an AI (Stockfish). It features game history, on-demand gameplay, real-time game analysis, player statistics, and three difficulty levels.",
     header: <Skeleton />,
@@ -114,25 +112,30 @@ const items = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen w-full items-center justify-center flex-col pt-20 pl-5 pr-7 light:bg-white">
-      <section id="header" className="w-full max-w-4xl">
-        <div className="flex flex-row gap-5 items-center">
-          <div>
+    <main className="flex min-h-screen w-full lg:w-[40%] mt-1 m-auto flex-col pt-10 p-7 border-2">
+      <section id="header">
+        <div className="flex flex-row gap-5 items-center w-full">
+          <div className="gap-5 flex justify-center items-center">
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
             </BlurFade>
+            <div className="flex-col flex flex-1 space-y-1.5">
+              <BlurFadeText
+                delay={BLUR_FADE_DELAY}
+                className="text-xl font-bold tracking-tighter sm:text-5xl xl:text-5xl/none"
+                yOffset={8}
+                text={`Hi 👋, I'm ${DATA.name.split(" ")[0]} `}
+              />
+              <BlurFadeText
+                className="max-w-[600px] md:text-xl"
+                delay={BLUR_FADE_DELAY}
+                text={DATA.description}
+              />
+            </div>
           </div>
-          <section id="about">
-            <TypewriterEffectSmoothDemo />
-            <BlurFadeText
-              className="text-sm text-pretty sm:text-2xl xl:text-2xl/none"
-              delay={BLUR_FADE_DELAY}
-              text={DATA.description}
-            />
-          </section>
         </div>
         <div className="flex flex-col gap-1 lg:gap-5 pt-5 lg:pt-10">
           <BlurFadeText
@@ -142,13 +145,13 @@ export default function Home() {
             text={`About Me`}
           />
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <Markdown className="text-sm text-pretty sm:text-2xl xl:text-2xl/none">
+            <Markdown className="max-w-[600px] text-xl text-pretty sm:text-xl xl:text-xl">
               {DATA.summary}
             </Markdown>
           </BlurFade>
         </div>
       </section>
-      <section id="work" className="w-full max-w-4xl">
+      <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3 pt-5">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-2xl font-bold">Work Experience</h2>
@@ -172,7 +175,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section id="education" className="w-full max-w-4xl">
+      <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3 pt-5 pb-5">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <h2 className="text-2xl font-bold">🧑‍🎓 Education</h2>
@@ -195,7 +198,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section id="skills" className="w-full max-w-4xl">
+      <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
@@ -209,18 +212,18 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="projects" className="w-full max-w-4xl">
+      <section id="projects">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-xl bg-foreground text-background px-3 py-1 text-sm">
                   My Projects
                 </div>
                 <h2 className="text-2xl font-bold tracking-tighter sm:text-4xl">
                   I&rsquo;ve been building <span className="text-red-500 underline">a lot of cool stuff</span>
                 </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="text-black dark:text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I&apos;ve worked on a variety of projects, from small experiments to full-blown web applications, each project showcases my love for coding and design.
                 </p>
               </div>
@@ -247,9 +250,57 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Analytics />
-      <SpeedInsights />
-      <Navbar />
+      <section id="contact">
+        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full rounded-2xl py-12 bg-gradient-to-r from-teal-300 to-violet-300 dark:from-teal-400 dark:to-violet-400">
+          <BlurFade delay={BLUR_FADE_DELAY * 16}>
+            <div className="space-y-3">
+              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                Contact
+              </div>
+              <h2 className="text-4xl font-extrabold tracking-tighter text-black sm:text-6xl">
+                Get in Touch
+              </h2>
+              <p className="mx-auto max-w-[600px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Have any questions (?), Feel free to reach out.
+                <br />
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+              </p>
+              <p className="mx-auto max-w-[600px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Connect with me on{" "}
+                <Link
+                  href={DATA.contact.social.LinkedIn.url}
+                  className="text-blue-800 hover:underline font-semibold"
+                >
+                  LinkedIn
+                </Link>{" "}
+                for quick chats, or send me an{" "}
+                <Link
+                  href={DATA.contact.social.email.url}
+                  className="text-blue-800 hover:underline font-semibold"
+                >
+                  email
+                </Link>{" "}
+                for detailed inquiries. Let’s make something great together!
+              </p>
+              {/* <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Want to chat? Just shoot me a dm{" "}
+                <Link
+                  href={DATA.contact.social.X.url}
+                  className="text-blue-500 hover:underline"
+                >
+                  with a direct question on twitter
+                </Link>{" "}
+                or send me an <Link
+                  href={DATA.contact.social.email.url}
+                  className="text-blue-500 hover:underline"
+                >email</Link>
+              </p> */}
+            </div>
+          </BlurFade>
+        </div>
+      </section>
+
+      {/* <Navbar /> */}
     </main>
   );
 }

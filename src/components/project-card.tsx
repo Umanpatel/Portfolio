@@ -43,7 +43,7 @@ export function ProjectCard({
   return (
     <Card
       className={
-        "flex flex-col overflow-hidden border-4 hover:shadow-lg transition-transform duration-300 ease-in-out transform hover:-translate-y-2 h-full"
+        "flex flex-col overflow-hidden rounded-2xl border-2 hover:shadow-lg transition-transform duration-300 ease-in-out transform hover:-translate-y-2 h-full"
       }
       id="projects"
     >
@@ -66,7 +66,7 @@ export function ProjectCard({
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-black dark:text-white dark:prose-invert">
             {description}
           </Markdown>
         </div>
@@ -76,7 +76,7 @@ export function ProjectCard({
           <div className="mt-2 flex flex-wrap gap-1">
             {tags?.map((tag) => (
               <Badge
-                className="px-1 py-0 text-[13px] bg-gradient-to-r from-sky-900 to-violet-800"
+                className="px-1 py-0 text-[13px] bg-gradient-to-r from-teal-500 to-violet-500"
                 variant="secondary"
                 key={tag}
               >

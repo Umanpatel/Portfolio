@@ -40,7 +40,7 @@ export const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "#projects", icon: CodeIcon, label: "Projects" },
-    { href: "https://drive.google.com/file/d/10XfioJAuNNsxx757X6fsSvtRLoHVftwF/view?usp=sharing", icon: FileDownIcon, label: "Resume", target: "_blank" },
+    { href: "https://drive.google.com/file/d/11-tdYiRHxJ3alAZd_V27qhUNInG1EBv3/view?usp=drive_link", icon: FileDownIcon, label: "Resume", target: "_blank" },
   ],
   contact: {
     email: "umpatel19041999@gmail.com",
@@ -59,13 +59,12 @@ export const DATA = {
         icon: Icons.linkedin,
         navbar: true,
       },
-    //   X: {
-    //     name: "X",
-    //     url: "https://x.com/0xadityaa",
-    //     icon: Icons.x,
-
-    //     navbar: true,
-    //   },
+      X: {
+        name: "X",
+        url: "https://x.com/0xadityaa",
+        icon: Icons.x,
+        navbar: true,
+      },
       email: {
         name: "Send Email",
         url: "mailto:umpatel19041999@gmail.com",
