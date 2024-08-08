@@ -53,7 +53,7 @@ export default function Home() {
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-5xl/none"
+                className="text-2xl font-bold tracking-tighter sm:text-5xl xl:text-5xl/none"
                 yOffset={8}
                 text={`Hi 👋, I'm ${DATA.name.split(" ")[0]} `}
               />
