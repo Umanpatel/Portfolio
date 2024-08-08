@@ -150,29 +150,29 @@ export const DATA = {
     },
     
     {
-      title: "Crypto Maniac",
-      href: "https://github.com/0xadityaa/Crypto-Maniac",
-      dates: "Jul 2021 - Jan 2022",
+      title: "Area Estimation Using HyperSpectral Image",
+      href: "https://github.com/Umanpatel/Area-Estimation-Of-HyperSpectral-MultiSpectral-Images-and-Classification",
+      dates: "Jan 2021 - May 2021",
       active: true,
       description:
-        "This project is a mobile app for crypto paper trading that allows user to perform paper trading on live market data for cryptocurrencies along with features like portfolio tracking, alerts, realtime market news, and more.",
+        "I implemented a Hybrid-Spectral-Net model at Nirma University, focusing on hyperspectral image classification using CNN and PCA. The project achieved high accuracy in classifying and estimating the area of hyperspectral and multispectral images.",
       technologies: [
-        "Flutter",
-        "Firebase",
-        "FCM",
-        "GCP",
-        "Firestore",
-        "Android",
-        "iOS",
+        "Jupyter",
+        "Python",
+        "Machine Learning",
+        "CNN",
+        "PCA",
+        "Keras, Sklearn, Numpy",
+        "GNU Octave",
       ],
       links: [
         {
           type: "Source",
-          href: "https://github.com/0xadityaa/Crypto-Maniac",
+          href: "https://github.com/Umanpatel/Area-Estimation-Of-HyperSpectral-MultiSpectral-Images-and-Classification",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/Crypto-Maniac.png",
+      image: "/MajorProject.png",
     },
   ],
 } as const;

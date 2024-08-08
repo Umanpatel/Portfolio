@@ -237,7 +237,7 @@ export default function Home() {
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}
               >
                 <ShineBorder
-                  className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
+                  className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
                   color={["#F3FC91", "#3DDFFC", "#FF0095"]}
                 >
                   <ProjectCard
