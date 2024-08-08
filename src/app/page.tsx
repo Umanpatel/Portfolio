@@ -1,7 +1,10 @@
+"use client"
+
+import * as React from "react"
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import {
   IconArrowWaveRightUp,
   IconBoxAlignRightFilled,
@@ -16,7 +19,6 @@ import Markdown from "react-markdown";
 import { ResumeCard } from "@/components/resume-card";
 import { ProjectCard } from "@/components/project-card";
 import { Badge } from "@/components/ui/badge";
-
 import Link from "next/link";
 import ShineBorder from "@/components/magicui/shine-border";
 
@@ -25,6 +27,7 @@ const BLUR_FADE_DELAY = 0.04;
 const Skeleton = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
 );
+
 const items = [
   {
     image: "/ReactRooks.png",
@@ -37,8 +40,8 @@ const items = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen w-full lg:w-[40%] mt-1 m-auto flex-col pt-10 p-7 border-2">
-      <section id="header">
+    <main className="flex flex-col min-h-screen w-full lg:w-[40%] m-auto p-7 border-2">
+      <section id="header" className="pb-10">
         <div className="flex flex-row gap-5 items-center w-full">
           <div className="gap-5 flex justify-center items-center">
             <BlurFade delay={BLUR_FADE_DELAY}>
@@ -76,8 +79,8 @@ export default function Home() {
           </BlurFade>
         </div>
       </section>
-      <section id="work">
-        <div className="flex min-h-0 flex-col gap-y-3 pt-5">
+      <section id="work" className="pb-10">
+        <div className="flex flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-2xl font-bold">Work Experience</h2>
           </BlurFade>
@@ -87,7 +90,6 @@ export default function Home() {
               delay={BLUR_FADE_DELAY * 6 + id * 0.05}
             >
               <ResumeCard
-                key={work.company}
                 logoUrl={work.logoUrl}
                 altText={work.company}
                 title={work.company}
@@ -100,8 +102,8 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section id="education">
-        <div className="flex min-h-0 flex-col gap-y-3 pt-5 pb-5">
+      <section id="education" className="pb-10">
+        <div className="flex flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <h2 className="text-2xl font-bold">Education</h2>
           </BlurFade>
@@ -111,7 +113,6 @@ export default function Home() {
               delay={BLUR_FADE_DELAY * 6 + id * 0.05}
             >
               <ResumeCard
-                key={education.school}
                 href={education.href}
                 logoUrl={education.logoUrl}
                 altText={education.school}
@@ -123,21 +124,21 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-3">
+      <section id="skills" className="pb-10">
+        <div className="flex flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
             {DATA.skills.map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
+                <Badge>{skill}</Badge>
               </BlurFade>
             ))}
           </div>
         </div>
       </section>
-      <section id="projects">
+      <section id="projects" className="pb-12">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -166,7 +167,6 @@ export default function Home() {
                 >
                   <ProjectCard
                     href={project.href}
-                    key={project.title}
                     title={project.title}
                     description={project.description}
                     dates={project.dates}
@@ -180,8 +180,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="contact">
-        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full rounded-2xl py-12 bg-gradient-to-r from-teal-100 to-violet-100 dark:from-teal-100 dark:to-violet-200">
+      <section id="contact" className="py-12">
+        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full rounded-2xl bg-gradient-to-r from-teal-100 to-violet-100 dark:from-teal-100 dark:to-violet-200">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
@@ -219,4 +219,3 @@ export default function Home() {
     </main>
   );
 }
-
