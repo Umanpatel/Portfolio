@@ -1,7 +1,6 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid"
 import {
   IconArrowWaveRightUp,
@@ -22,27 +21,6 @@ import Link from "next/link";
 import ShineBorder from "@/components/magicui/shine-border";
 
 const BLUR_FADE_DELAY = 0.04;
-
-export function TypewriterEffectSmoothDemo() {
-  const words = [
-    {
-      text: "Hi",
-    },
-    {
-      text: "👋,",
-    },
-    {
-      text: "I'm",
-    },
-    {
-      text: "Umang",
-    },
-
-  ];
-  return (
-    <TypewriterEffectSmooth words={words} />
-  );
-}
 
 export function BentoGridDemo() {
   return (
