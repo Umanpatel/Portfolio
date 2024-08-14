@@ -40,7 +40,7 @@ const items = [
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen w-full lg:w-[40%] m-auto p-7 border-2">
+    <main className="flex flex-col min-h-screen w-full lg:w-[60%] m-auto p-7 border-2">
       <section id="header" className="pb-10">
         <div className="flex flex-row gap-5 items-center w-full">
           <div className="gap-5 flex justify-center items-center">
