@@ -40,12 +40,12 @@ const items = [
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen w-full lg:w-[60%] m-auto p-7 border-2">
-      <section id="header" className="pb-10">
+    <main className="flex flex-col min-h-screen w-full lg:w-[55%] m-auto p-7 border-2 lg:p-10">
+      <section id="header" className="pb-10 mt-3">
         <div className="flex flex-row gap-5 items-center w-full">
-          <div className="gap-5 flex justify-center items-center">
+          <div className="gap-5 flex flex-col md:flex-row md:justify-center lg:items-center">
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
+              <Avatar className="size-44 border">
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
@@ -180,7 +180,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="contact" className="py-12">
+      <section id="contact" className="mb-16 py-12">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full rounded-2xl bg-gradient-to-r from-teal-100 to-violet-100 dark:from-teal-100 dark:to-violet-200">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
