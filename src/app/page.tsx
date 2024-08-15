@@ -58,14 +58,14 @@ export default function Home() {
                 text={`Hi 👋, I'm ${DATA.name.split(" ")[0]} `}
               />
               <BlurFadeText
-                className="max-w-[600px] text-xl text-pretty sm:text-xl xl:text-xl"
+                className=" text-xl text-pretty sm:text-xl xl:text-xl"
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-1 lg:gap-5 pt-5 lg:pt-10">
+        <div className="flex flex-col  gap-1 lg:gap-5 pt-5 lg:pt-10 ">
           <BlurFadeText
             delay={0.30 * 2}
             className="text-xl font-bold tracking-tighter sm:text-3xl xl:text-3xl/none"
@@ -73,7 +73,7 @@ export default function Home() {
             text={`About Me`}
           />
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <Markdown className="max-w-[600px] text-xl text-pretty sm:text-xl xl:text-xl">
+            <Markdown className=" text-xl items-center justify-center text-pretty sm:text-xl xl:text-xl">
               {DATA.summary}
             </Markdown>
           </BlurFade>
