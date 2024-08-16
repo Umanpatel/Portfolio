@@ -22,12 +22,14 @@ export const DATA = {
     "Tailwind",
     "Java",
     "Spring Boot",
+    "Spring Security",
     "Docker",
     "Microservices",
     "MySQL",
     "PostgreSQL",
     "MongoDB",
     "Firebase",
+    "RESTful APIs",
     "Supabase",
     "WebSockets",
     "Kafka",
@@ -148,7 +150,31 @@ export const DATA = {
       ],
       image: "/ReactRooks.png",
     },
-    
+    {
+      title: "E-Commerce Microservices",
+      href: "https://github.com/Umanpatel/E-Commerce_MicroServices",
+      dates: "August 2024 - Present",
+      active: true,
+      description:
+        "This project is a basic e-commerce application designed using a microservices architecture. It includes distinct services for handling Products, Orders, Admin operations, and Image management, all coordinated through an API Gateway. Each service is ensuring scalability and flexibility in managing the application.",
+      technologies: [
+        "PostgreSQL/H2Databse",
+        "Spring Boot",
+        "Apache Kafka",
+        "Spring Cloud Gateway",
+        "React.js",
+        "Docker",
+        "Open Feign",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/Umanpatel/E-Commerce_MicroServices",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/EcommerceMicroservice.png",
+    },
     {
       title: "Area Estimation Using HyperSpectral Image",
       href: "https://github.com/Umanpatel/Area-Estimation-Of-HyperSpectral-MultiSpectral-Images-and-Classification",
