@@ -42,7 +42,7 @@ export const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
     // { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "#projects", icon: CodeIcon, label: "Projects" },
-    { href: "https://drive.google.com/file/d/11-tdYiRHxJ3alAZd_V27qhUNInG1EBv3/view?usp=drive_link", icon: FileDownIcon, label: "Resume", target: "_blank" },
+    { href: "https://drive.google.com/file/d/1yTNQ1Da2wor1r6rcRxOn1tqVkWMYJd9N/view", icon: FileDownIcon, label: "Resume", target: "_blank" },
   ],
   contact: {
     email: "umpatel19041999@gmail.com",
@@ -104,7 +104,7 @@ export const DATA = {
   education: [
     {
       school: "Humber College",
-      href: "https://humber.ca/",
+      href: "https://appliedtechnology.humber.ca/programs/information-technology-solutions.html",
       degree: "Information Technology Solutions",
       logoUrl: "/humber.png",
       start: "Jan 2023",
@@ -112,7 +112,7 @@ export const DATA = {
     },
     {
       school: "Nirma University",
-      href: "https://nirmauni.ac.in/",
+      href: "https://cse.nirmauni.ac.in/",
       degree: "Computer Engineering",
       logoUrl: "/nirma.jpeg",
       start: "June 2017",
@@ -122,7 +122,7 @@ export const DATA = {
   projects: [
     {
       title: "React Rooks",
-      href: "https://github.com/0xadityaa/React-Rooks-UI",
+      href: "https://github.com/Umanpatel/React-Rooks",
       dates: "Jun - Jul 2024",
       active: true,
       description:
@@ -144,7 +144,7 @@ export const DATA = {
         },
         {
           type: "Source",
-          href: "https://github.com/0xadityaa/React-Rooks-UI",
+          href: "https://github.com/Umanpatel/React-Rooks",
           icon: <Icons.github className="size-3" />,
         },
       ],
