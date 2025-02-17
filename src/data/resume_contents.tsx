@@ -40,7 +40,7 @@ export const DATA = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     // { href: "/blog", icon: NotebookIcon, label: "Blog" },
-    { href: "#projects", icon: CodeIcon, label: "Projects" },
+    { href: "/projects", icon: CodeIcon, label: "Projects" },
   ],
   contact: {
     email: "umpatel19041999@gmail.com",
