@@ -41,7 +41,6 @@ export const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
     // { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "#projects", icon: CodeIcon, label: "Projects" },
-    { href: "https://drive.google.com/file/d/1yTNQ1Da2wor1r6rcRxOn1tqVkWMYJd9N/view", icon: FileDownIcon, label: "Resume", target: "_blank" },
   ],
   contact: {
     email: "umpatel19041999@gmail.com",
