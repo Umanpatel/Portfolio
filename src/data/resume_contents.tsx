@@ -14,11 +14,11 @@ export const DATA = {
   avatarUrl: "/profile1.jpeg",
   skills: [
     "React",
+    "React Query",
     "Next",
     "Node",
     "Javascript",
     "Typescript",
-    "React Query",
     "Tailwind",
     "Java",
     "Spring Boot",
@@ -28,15 +28,14 @@ export const DATA = {
     "MySQL",
     "PostgreSQL",
     "MongoDB",
-    "Firebase",
     "RESTful APIs",
     "Supabase",
     "WebSockets",
     "Kafka",
-    "ORM's [Drizzle, Hibernate]",
     "Git",
     "GitHub Actions",
     "Vercel",
+    "Imagekit",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -139,7 +138,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://react-rooks-ui.vercel.app/",
+          href: "chess-against-ai.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
@@ -149,6 +148,37 @@ export const DATA = {
         },
       ],
       image: "/ReactRooks.png",
+    },
+    {
+      title: "Reels Pro Social Media",
+      href: "https://github.com/Umanpatel/ReelsProSocialMedia",
+      dates: "Feb 2025",
+      active: true,
+      description:
+        "A modern Next.js application for managing and selling video content using ImageKit integration. This project provides a full-featured platform with user authentication, video upload capabilities.",
+      technologies: [
+        "Next.js 15",
+        "React 19",
+        "Typescript",
+        "Imagekit",
+        "Tailwind CSS",
+        "MongoDB",
+        "DaisyUI",
+        "React Hook Form",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "reels-pro-social-media.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/Umanpatel/ReelsProSocialMedia",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/reelpro.png",
     },
     {
       title: "E-Commerce Microservices",
