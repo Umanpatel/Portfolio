@@ -33,10 +33,10 @@ function Project() {
                 key={project.title}
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}
               >
-                <ShineBorder
+                {/* <ShineBorder
                   className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
                   color={["#F3FC91", "#3DDFFC", "#FF0095"]}
-                >
+                > */}
                   <ProjectCard
                     href={project.href}
                     title={project.title}
@@ -46,7 +46,7 @@ function Project() {
                     image={project.image}
                     links={project.links}
                   />
-                </ShineBorder>
+                {/* </ShineBorder> */}
               </BlurFade>
             ))}
           </div>

@@ -137,7 +137,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "chess-against-ai.vercel.app/",
+          href: "https://chess-against-ai.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
@@ -168,7 +168,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "reels-pro-social-media.vercel.app/",
+          href: "https://reels-pro-social-media.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
