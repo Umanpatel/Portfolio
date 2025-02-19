@@ -1,5 +1,4 @@
 import BlurFade from '@/components/magicui/blur-fade'
-import ShineBorder from '@/components/magicui/shine-border';
 import { ProjectCard } from '@/components/project-card';
 import { DATA } from '@/data/resume_contents'
 import React from 'react'
@@ -15,14 +14,14 @@ function Project() {
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-xl bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-xl bg-foreground text-background px-3 py-1 text-m">
                   My Projects
                 </div>
-                <h2 className="text-2xl font-bold tracking-tighter sm:text-4xl">
-                  Check Out My Work
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-2xl ">
+                  I&rsquo;ve been <a className='text-red-600 underline'>Building Cool✨ & Innovative💡 Projects.</a>
                 </h2>
                 <p className="text-black dark:text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&rsquo;ve been involved in creating a wide range of exciting projects, from small projects to large-scale web applications, all highlighting my dedication to coding and design.
+                I&rsquo;ve involved in creating a wide range of exciting projects, from small projects to large-scale web applications, all highlighting my dedication to coding and design.
                 </p>
               </div>
             </div>
@@ -33,10 +32,6 @@ function Project() {
                 key={project.title}
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}
               >
-                {/* <ShineBorder
-                  className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
-                  color={["#F3FC91", "#3DDFFC", "#FF0095"]}
-                > */}
                   <ProjectCard
                     href={project.href}
                     title={project.title}
@@ -46,7 +41,6 @@ function Project() {
                     image={project.image}
                     links={project.links}
                   />
-                {/* </ShineBorder> */}
               </BlurFade>
             ))}
           </div>

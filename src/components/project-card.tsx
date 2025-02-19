@@ -42,7 +42,7 @@ export function ProjectCard({
   return (
     <Card
       className={
-        "flex flex-col overflow-hidden rounded-2xl shadow-lg h-full w-full " // Corrected shadow class
+        "flex flex-col overflow-hidden rounded-2xl shadow-lg h-full w-full border-2 border-zinc-300 dark:border-zinc-700" // Corrected shadow class
       }
       id="projects"
     >
@@ -78,7 +78,7 @@ export function ProjectCard({
           <div className="mt-2 flex flex-wrap gap-1">
             {tags.map((tag) => (
               <Badge
-                className="px-1 py-0 text-[13px] bg-gradient-to-r from-teal-500 to-violet-500"
+                className="px-1 py-0 text-[13px] bg-black text-white"
                 variant="secondary"
                 key={tag}
               >
