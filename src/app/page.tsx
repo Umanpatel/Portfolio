@@ -81,7 +81,7 @@ export default function Home() {
       <section id="work" className="pb-10">
         <div className="flex flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-2xl font-bold">Work Experience</h2>
+            <h2 className="text-2xl font-bold">💼 Work Experience</h2>
           </BlurFade>
           {DATA.work.map((work, id) => (
             <BlurFade
@@ -104,7 +104,7 @@ export default function Home() {
       <section id="education" className="pb-10">
         <div className="flex flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className="text-2xl font-bold">Education</h2>
+            <h2 className="text-2xl font-bold">🎓 Education</h2>
           </BlurFade>
           {DATA.education.map((education, id) => (
             <BlurFade
@@ -126,7 +126,7 @@ export default function Home() {
       <section id="skills" className="pb-10">
         <div className="flex flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
+            <h2 className="text-xl font-bold">🧠 Skills</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
             {DATA.skills.map((skill, id) => (
@@ -165,9 +165,9 @@ export default function Home() {
                   href={DATA.contact.social.email.url}
                   className="text-blue-800 hover:underline font-semibold"
                 >
-                  email
+                  email.
                 </Link>{" "}
-                for detailed inquiries. Let’s make something great together!
+                Let’s make something great together!
               </p>
             </div>
           </BlurFade>
