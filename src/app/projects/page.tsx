@@ -18,7 +18,7 @@ function Project() {
                   My Projects
                 </div>
                 <h2 className="text-2xl font-bold tracking-tighter sm:text-2xl ">
-                  I&rsquo;ve been <a className='text-red-600 underline'>Building Cool✨ & Innovative💡 Projects.</a>
+                  I&rsquo;ve been <a className='text-red-600 underline'>Building Cool✨ & Innovative💡Projects.</a>
                 </h2>
                 <p className="text-black dark:text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 I&rsquo;ve involved in creating a wide range of exciting projects, from small projects to large-scale web applications, all highlighting my dedication to coding and design.
