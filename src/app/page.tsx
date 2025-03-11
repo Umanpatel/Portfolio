@@ -4,15 +4,8 @@ import * as React from "react"
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import {
-  IconArrowWaveRightUp,
-  IconBoxAlignRightFilled,
-  IconBoxAlignTopLeft,
   IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
 } from "@tabler/icons-react";
 import { DATA } from "@/data/resume_contents";
 import Markdown from "react-markdown";
@@ -72,7 +65,7 @@ export default function Home() {
             text={`About Me`}
           />
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <Markdown className=" text-xl items-center justify-center text-pretty sm:text-xl xl:text-xl">
+            <Markdown className=" text-xl items-center justify-center text-pretty sm:text-xl xl:text-xl text-gray-500 dark:text-gray-300">
               {DATA.summary}
             </Markdown>
           </BlurFade>

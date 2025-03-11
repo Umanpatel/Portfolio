@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "I craft impactful software solutions, turning ideas into code. Think twice, code once. Programming isn't about what you know; it's about what you can figure out.There is always one more bug to fix.",
   summary:
-    "Namaste! Hello! Bonjour! I'm from the vibrant heart of Gujarat, India, and I'm currently residing in Toronto, ON, Canada. As a passionate full-stack developer, I am dedicated to delivering high-quality and user-friendly software solutions. My deep connection to nature, love for music, and excitement for the world of games inspire my work. I blend my technical expertise with creativity, exploring new strategies and rhythms to drive my innovative journey.",   
+    "Namaste! Hello! Bonjour! I'm from the vibrant heart of Gujarat, India, and I'm currently coding from Toronto, Canada. As a passionate full-stack developer, I am dedicated to delivering high-quality and user-friendly software solutions. Focusing on mastering React.js, Next.js. Beyond coding, I am a passionate gamer who sees technology as a playground of endless possibilities ♾️. Gaming 🎮 fuels my creativity, helping me think outside the box and build engaging, immersive applications.",   
   avatarUrl: "/profile1.jpeg",
   skills: [
     "React",
