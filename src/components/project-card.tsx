@@ -42,7 +42,7 @@ export function ProjectCard({
   return (
     <Card
       className={
-        "flex flex-col overflow-hidden rounded-2xl shadow-lg h-full w-full border-2 border-zinc-300 dark:border-zinc-700" // Corrected shadow class
+        "flex flex-col overflow-hidden rounded-3xl shadow-lg h-full w-full border-2 border-zinc-300 dark:border-zinc-700" // Corrected shadow class
       }
       id="projects"
     >

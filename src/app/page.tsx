@@ -4,15 +4,8 @@ import * as React from "react"
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import {
-  IconArrowWaveRightUp,
-  IconBoxAlignRightFilled,
-  IconBoxAlignTopLeft,
   IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
 } from "@tabler/icons-react";
 import { DATA } from "@/data/resume_contents";
 import Markdown from "react-markdown";
@@ -72,7 +65,7 @@ export default function Home() {
             text={`About Me`}
           />
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <Markdown className=" text-xl items-center justify-center text-pretty sm:text-xl xl:text-xl">
+            <Markdown className=" text-xl items-center justify-center text-pretty sm:text-xl xl:text-xl text-gray-500 dark:text-gray-300">
               {DATA.summary}
             </Markdown>
           </BlurFade>
@@ -128,7 +121,7 @@ export default function Home() {
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">🧠 Skills</h2>
           </BlurFade>
-          <div className="flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-2">
             {DATA.skills.map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
                 <Badge>{skill}</Badge>
@@ -137,14 +130,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="contact" className="mb-16 py-12">
-        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full rounded-2xl bg-gradient-to-r from-teal-100 to-violet-100 dark:from-teal-100 dark:to-violet-200">
+      <section id="contact" className="mb-16">
+        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-auto rounded-2xl bg-gradient-to-r from-teal-100 to-violet-100 dark:from-teal-100 dark:to-violet-200">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                 Contact
               </div>
-              <h2 className="text-4xl font-extrabold tracking-tighter text-black sm:text-6xl">
+              <h2 className="text-4xl font-extrabold tracking-tighter text-black sm:text-6xl pt-4">
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -152,7 +145,7 @@ export default function Home() {
                 <br />
                 I'm open to discussing new projects, ideas, or opportunities.
               </p>
-              <p className="mx-auto max-w-[600px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p className="p-4 mx-auto max-w-[600px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Connect with me on{" "}
                 <Link
                   href={DATA.contact.social.LinkedIn.url}
@@ -167,7 +160,7 @@ export default function Home() {
                 >
                   email.
                 </Link>{" "}
-                Let’s make something great together!
+                Let&apos;s make something great together!
               </p>
             </div>
           </BlurFade>
