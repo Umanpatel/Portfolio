@@ -52,8 +52,7 @@ export default async function BlogPost({ params }: BlogParams) {
 
   return (
     <main className="flex flex-col min-h-screen w-full lg:w-[55%] m-auto p-7 border-2 lg:p-10">
-      Exciting full blog page is coming soon, Stay Tune and Keep Coding.
-      {/* <article className="prose dark:prose-invert max-w-none">
+      <article className="prose dark:prose-invert max-w-none">
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
           <header className="mb-8">
             <h1 className="text-3xl font-bold tracking-tight md:text-4xl mb-2">
@@ -95,7 +94,7 @@ export default async function BlogPost({ params }: BlogParams) {
             <ShareButtons url={currentUrl} title={post.title} />
           </div>
         </BlurFade>
-      </article> */}
+      </article>
     </main>
   );
 }
