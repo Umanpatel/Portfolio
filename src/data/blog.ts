@@ -41,7 +41,7 @@ export async function getPost(slug: string): Promise<BlogPost | null> {
     const result = await unified()
       .use(remarkParse)
       .use(remarkRehype)
-      .use(rehypePrettyCode, prettyCodeOptions)
+      .use(rehypePrettyCode, prettyCodeOptions as any)
       .use(rehypeStringify)
       .process(content);
 
