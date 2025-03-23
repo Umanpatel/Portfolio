@@ -66,4 +66,47 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  pre {
+    @apply !px-0 rounded-lg overflow-x-auto py-4 w-full;
+  }
+
+  pre [data-line] {
+    @apply px-4;
+  }
+
+  code {
+    @apply text-sm md:text-base !leading-loose overflow-x-auto whitespace-pre-wrap break-words;
+  }
+
+  pre > code {
+    counter-reset: line;
+    @apply w-full;
+  }
+
+  code[data-theme*=" "],
+  code[data-theme*=" "] span {
+    color: var(--shiki-light);
+    background-color: var(--shiki-light-bg);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    code[data-theme*=" "],
+    code[data-theme*=" "] span {
+      color: var(--shiki-dark);
+      background-color: var(--shiki-dark-bg);
+    }
+  }
+
+  [data-rehype-pretty-code-title] {
+    @apply px-4 py-2 text-sm font-mono border rounded-t-lg text-foreground bg-muted;
+  }
+
+  [data-rehype-pretty-code-fragment] {
+    @apply mb-6 w-full max-w-full overflow-hidden;
+  }
+
+  .highlighted {
+    @apply bg-muted/50 border-l-4 border-primary pl-3;
+  }
 }

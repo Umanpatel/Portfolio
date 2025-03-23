@@ -51,15 +51,15 @@ export default async function BlogPost({ params }: BlogParams) {
   }
 
   return (
-    <main className="flex flex-col min-h-screen w-full lg:w-[55%] m-auto p-7 border-2 lg:p-10">
-      <article className="prose dark:prose-invert max-w-none">
+    <main className="flex flex-col min-h-screen w-full max-w-[95%] sm:max-w-[85%] lg:max-w-[55%] mx-auto px-4 sm:px-6 lg:px-10 py-6">
+      <article className="prose prose-sm sm:prose-base lg:prose-lg dark:prose-invert max-w-none overflow-hidden">
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
-          <header className="mb-8">
-            <h1 className="text-3xl font-bold tracking-tight md:text-4xl mb-2">
+          <header className="mb-4 sm:mb-6 lg:mb-8">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-2 break-words">
               {post.title}
             </h1>
-            <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-              <time dateTime={post.date}>
+            <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+              <time dateTime={post.date} className="whitespace-nowrap">
                 {new Date(post.date).toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "long",
@@ -68,8 +68,8 @@ export default async function BlogPost({ params }: BlogParams) {
               </time>
               {post.readingTime && (
                 <>
-                  <span>•</span>
-                  <span>{post.readingTime}</span>
+                  <span className="hidden sm:inline">•</span>
+                  <span className="whitespace-nowrap">{post.readingTime}</span>
                 </>
               )}
             </div>
@@ -78,10 +78,14 @@ export default async function BlogPost({ params }: BlogParams) {
 
         <BlurFade delay={BLUR_FADE_DELAY * 12}>
           <div 
-            className="prose-lg prose-zinc dark:prose-invert"
+            className="prose-sm sm:prose-base lg:prose-lg prose-zinc dark:prose-invert
+            prose-pre:overflow-x-auto prose-pre:max-w-full
+            prose-code:text-sm prose-code:sm:text-base
+            prose-img:rounded-lg prose-img:mx-auto prose-img:max-w-full"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </BlurFade>
+
         <BlurFade delay={BLUR_FADE_DELAY * 13}>
           <p className="text-muted-foreground text-center italic mt-8 mb-16 animate-fadeInUp">
               Written by{" "}
