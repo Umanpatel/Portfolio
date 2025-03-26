@@ -30,25 +30,25 @@ export function ShareButtons({ url, title }: ShareButtonsProps) {
   return (
     <div className="flex items-center justify-center space-x-4 mt-4">
       <WhatsappShareButton url={url} title={title}>
-        <WhatsappIcon size={32} round />
+        <WhatsappIcon size={36} round />
       </WhatsappShareButton>
 
       <LinkedinShareButton url={url} title={title}>
-        <LinkedinIcon size={32} round />
+        <LinkedinIcon size={36} round />
       </LinkedinShareButton>
 
       <button
         onClick={handleEmailShare}
-        className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
+        className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 dark:bg-white transition-colors"
       >
-        <Mail size={18} />
+        <Mail size={20} className="text-red-500"/>
       </button>
 
       <button
         onClick={handleCopyLink}
-        className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
+        className="p-2 rounded-full  bg-gray-200 hover:bg-gray-300 dark:bg-white transition-colors"
       >
-        <Link2 size={18} />
+        <Link2 size={20} className="text-blue-600 dark:text-blue-600" />
       </button>
 
       {copied && (

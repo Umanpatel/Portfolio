@@ -78,10 +78,17 @@ export default async function BlogPost({ params }: BlogParams) {
 
         <BlurFade delay={BLUR_FADE_DELAY * 12}>
           <div 
-            className="prose-sm sm:prose-base lg:prose-lg prose-zinc dark:prose-invert
-            prose-pre:overflow-x-auto prose-pre:max-w-full
-            prose-code:text-sm prose-code:sm:text-base
-            prose-img:rounded-lg prose-img:mx-auto prose-img:max-w-full"
+            className="prose prose-lg max-w-none
+              prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100
+              prose-p:text-gray-700 dark:prose-p:text-gray-300
+              prose-li:text-gray-700 dark:prose-li:text-gray-300
+              prose-strong:text-gray-900 dark:prose-strong:text-gray-100
+              prose-pre:bg-neutral-900 prose-pre:text-gray-100 
+              prose-code:text-gray-100 
+              prose-code:bg-neutral-900
+              prose-code:rounded prose-code:px-1
+              prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline
+              prose-img:rounded-lg"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </BlurFade>
@@ -89,12 +96,12 @@ export default async function BlogPost({ params }: BlogParams) {
         <BlurFade delay={BLUR_FADE_DELAY * 13}>
           <p className="text-muted-foreground text-center italic mt-8 mb-16 animate-fadeInUp">
               Written by{" "}
-              <span className="inline-block font-semibold hover:text-primary transition-transform duration-300 hover:scale-110 animate-shimmer">
+              <span className="inline-block font-semibold">
                   Umang Patel
               </span>
           </p>
           <div className="mt-8 mb-16">
-            <h4 className="text-center text-sm text-muted-foreground mb-2">Share With</h4>
+            <h4 className="text-center text-md text-muted-foreground mb-2">Share With</h4>
             <ShareButtons url={currentUrl} title={post.title} />
           </div>
         </BlurFade>
