@@ -129,6 +129,38 @@ export const DATA = {
       image: "/ReactRooks.png",
     },
     {
+      title: "AI-Powered Career Coach",
+      href: "",
+      dates: "March 2025",
+      active: true,
+      description:
+        "Developed a comprehensive career development platform using Next.js 14 and Google Gemini AI that helps professionals accelerate their careers. The application features AI-powered resume building, intelligent cover letter generation, and adaptive interview preparation.",
+      technologies: [
+        "Next.js 14",
+        "Google Gemini AI",
+        "Prisma",
+        "Zod",
+        "PostgreSQL",
+        "Clerk",
+        "Inngest",
+        "TailwindCSS",
+        "Shadcn UI",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://ai-career-coach-tan.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/Umanpatel/AI-Career-Coach",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/ai-career-coach.png",
+    },
+    {
       title: "Reels Pro Social Media",
       href: "https://github.com/Umanpatel/ReelsProSocialMedia",
       dates: "Feb 2025",
