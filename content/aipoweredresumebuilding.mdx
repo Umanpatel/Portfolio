@@ -1,0 +1,78 @@
+---
+title: "AI-Powered Career Coach"
+date: "2025-04-12"
+summary: "Simplifying job searches with AI-driven resume tools."
+---
+
+![Gif of spongebob with a resume.](/blogimage1.gif)
+
+After graduation, many of us face the overwhelming and time-consuming task of crafting professional resumes, tailoring cover letters to match job descriptions, and preparing for interviews. These processes demand effort, precision, and countless hours, leaving job seekers stressed and uncertain. But what if AI could handle these challenges for you - saving time while delivering exceptional, job-specific results?
+
+This idea inspired the creation of AI Career Coach an intelligent tool designed to simplify the job search journey. With just a few clicks, users can generate polished resumes, tailored cover letters, and even participate in mock interviews while tracking their progress. In this blog, I&apos;ll take you through the journey of building this tool from understanding the problem to creating an innovative, AI-powered solution that empowers job seekers to reach their goals.
+
+
+## How I Built This Project
+### Idea:
+The idea stemmed from my personal experience of struggling to create resumes and cover letters during job applications. Moreover, creating resume and cover letter personalized for each job can be time consuming. I realized that automating this process would be a game-changer for job seekers.
+### Planning:
+I started by researching existing tools and identifying their limitations. Many tools required extensive manual input or lacked personalization. My vision was to create a platform that integrates AI for tailored outputs while maintaining a seamless user experience. The tech stack I selected includes **Google Gemini API, Next.js, PostgreSQL, Clerk, Prisma, Inngest, and Zod.**
+
+### Why [Google Gemini API](https://ai.google.dev/gemini-api/docs)?
+The Google Gemini API was chosen for its robust AI capabilities in generating resumes, cover letters, and conducting mock interviews. This API allows the platform to tailor outputs based on job descriptions and user-provided details. For example:
+
+- Resume Creation: Users can input basic information or an existing resume to generate professional resumes tailored to specific job descriptions.
+- Mock Interviews: Gemini creates job-specific interview questions and provides professional feedback on answers.
+- Cover Letters: It crafts personalized cover letters by analyzing job titles, company names, and descriptions.
+Its versatility in handling multiple languages and delivering professional-grade outputs makes it ideal for this project.
+
+### Building a Scalable Frontend: [Next.js](https://nextjs.org/docs)
+Next.js was selected for its efficiency in building scalable web applications. It offers:
+
+- Server-Side Rendering (SSR): Ensures fast load times and better SEO performance.
+- API Routes: Simplifies backend integration for handling user data and AI interactions.
+Additionally, Next.js integrates seamlessly with other tools like Clerk for authentication, Shadcn and Tailwind CSS for responsive design.
+
+### Reliable Data Storage: [PostgreSQL (Neon)](https://neon.tech/docs/introduction)
+I used Neon, a serverless PostgreSQL database, to store user data securely. Neon offers:
+
+- Scalability: Handles large datasets efficiently.
+- Open Source: Provides flexibility in customization.
+- Serverless Architecture: Reduces operational overhead with automatic scaling.
+This database stores resumes, cover letters, and user progress data while ensuring reliability.
+
+### Why [Clerk](https://clerk.com/docs)?
+Clerk provides comprehensive User Authentication and User Management right out of the box. 
+- Authentication: Provides secure login and registration processes.
+- User Management: Handles user data and permissions efficiently.
+- Database Integrations: Seamlessly integrates with databases for storing user information.
+- SDKs: Offers prebuilt components and React Hooks for easy integration with Next.js.
+
+By leveraging Clerk's capabilities, I was able to focus on developing the core features of the AI Career Coach while ensuring robust user management and authentication.
+
+### Efficient Database Management: [Prisma ORM](https://www.prisma.io/docs?_gl=1*1rhxrsz*_up*MQ..*_gs*MQ..&gclid=CjwKCAjw--K_BhB5EiwAuwYoyu97OLn_XtOQHr7db8lf60_HQDzvS6oEKygvFFth976WKQTEBdaiRBoCkAoQAvD_BwE)
+Prisma ORM was chosen for managing database operations due to its:
+
+- Type Safety: Ensures robust code by leveraging TypeScript.
+- Simplified Queries: Makes database interactions intuitive.
+- Integration with Next.js: Streamlines backend development.
+- Prisma bridges the gap between NeonDB and the application logic.
+
+### Streamlining Background Tasks: [Inngest](https://www.inngest.com/docs)
+Inngest was integrated to handle background processing tasks like:
+
+- Automating resume generation workflows.
+- I am using Inngest Cron jobs, which will be making use of Gemini API to generate Industry insights every single Sunday at midnight. 
+- Managing asynchronous operations such as sending notifications or tracking user progress.
+- Its event-driven architecture ensures efficient handling of tasks without blocking the main application flow.
+
+### Ensuring Data Integrity: [Zod](https://zod.dev/)
+Zod was used for schema validation to ensure data integrity. It provides:
+
+- Runtime Validation: Validates user inputs dynamically.
+- Integration with TypeScript: Simplifies type-checking across the application.
+This ensures that all data passed between components is accurate and secure.
+
+### Final Thoughts
+By combining these technologies, I created a robust AI-powered platform that simplifies the job search process. The integration of AI ensures personalized results while the modern tech stack guarantees scalability, security, and responsiveness.
+
+If you want to check out my full code: [GitHub Repo](https://github.com/Umanpatel/AI-Career-Coach)

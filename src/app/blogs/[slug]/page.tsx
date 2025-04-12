@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import BlurFade from "@/components/magicui/blur-fade";
 import { ShareButtons } from "@/components/sharebutton";
 import { headers } from "next/headers";
-
+import Image  from "next/image";
 const BLUR_FADE_DELAY = 0.04;
 
 interface BlogParams {
