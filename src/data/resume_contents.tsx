@@ -99,6 +99,43 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Clipper",
+      href: "https://github.com/Umanpatel/clipper",
+      dates: "July 2025",
+      active: true,
+      description:
+        "Clipper is an AI agent designed to help content creators effortlessly repurpose long-form video content such as podcasts, interviews, and live streams into engaging, bite-sized clips for platforms like TikTok, Instagram Reels, and YouTube Shorts.",
+      technologies: [
+        "Next.js",
+        "PostgreSQL",
+        "FastAPI",
+        "Gemini 2.5 Pro",
+        "AWS S3",
+        "FFMPEG",
+        "Inngest",
+        "TailwindCSS",
+        "Shadcn UI",
+      ],
+      links: [
+        {
+          type: "DevLog",
+          href: "https://devpost.com/software/clipper-ndiy1m",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Website",
+          href: "https://clipper-ai-omega.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/Umanpatel/clipper",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/clipper.png",
+    },
+    {
       title: "React Rooks",
       href: "https://github.com/Umanpatel/React-Rooks",
       dates: "Jun - Jul 2024",
