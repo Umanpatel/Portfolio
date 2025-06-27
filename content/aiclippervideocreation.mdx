@@ -1,0 +1,98 @@
+---
+title: "AI-Clipper 🎬: Revolutionizing Short-Form Video Creation"
+date: "2025-06-28"
+summary: "AI agent to automatically identify viral moments in long-form videos and generate engaging, edited clips for social media."
+---
+
+In today&apos;s fast-paced digital world, short-form videos dominate social media platforms like TikTok, Instagram Reels, and YouTube Shorts. However, for content creators, repurposing long-form content such as podcasts, interviews, and live streams into engaging, bite-sized clips can be a daunting and time-consuming task. Enter Clipper 🎬, an innovative tool designed to automate this process and empower creators to focus on what they do best—creating amazing content.
+
+Developed in just 24 hours during the Hack AI Toronto hackathon, Clipper is a testament to the power of modern technology and creativity. In this blog, I&apos;ll walk you through the journey of building Clipper, from identifying the problem to crafting a cutting-edge solution.
+
+# Clipper 🎬
+
+AI agent to automatically identify viral moments in long-form videos and generate engaging, edited clips for social media.
+
+## ✨ The Problem
+
+Content creators pour countless hours into producing high-quality long-form content. However, the shift toward short-form video content demands a different strategy. Manually identifying key moments, editing them into short clips, and adding subtitles optimized for mobile viewing is a tedious and resource-intensive process. This inefficiency often prevents creators from fully leveraging their long-form content. 
+
+## 🚀 The Solution
+
+Clipper 🎬 automates the entire workflow, transforming long-form videos into captivating short clips with minimal effort. Here&apos;s how it works:
+
+- Upload: Users upload their long-form videos via a sleek web interface.
+- Transcription: The audio is transcribed into text using AI-powered speech-to-text technology.
+- Key Moments: An AI agent identifies the most engaging and relevant moments from the transcript.
+- Editing: Using FFMPEG, these moments are transformed into short clips with audio-synced subtitles optimized for mobile platforms.
+- Delivery: The final clips are uploaded back to the cloud, ready for sharing on social media.
+
+## 🏗️ System Architecture
+
+The application is built with a modern, scalable architecture that separates the user-facing frontend from the intensive processing backend.
+
+### High-Level Overview
+
+1. **Frontend (Next.js & Vercel):** The user interacts with a web application to upload their long-form video. The video is uploaded directly to an AWS S3 bucket.
+2. **Queue System (Inngest):** Once the upload is complete, an event is sent to Inngest, our queueing system, to signal that a new video needs to be processed.
+3. **Backend (Python, Modal & FFMPEG):** An Inngest function triggers our serverless backend, which is deployed on Modal. This backend service, running on powerful GPUs, performs the heavy lifting:
+    - **Downloads** the video from AWS S3.
+    - **Transcribes** the audio using an AI speech-to-text model.
+    - **Identifies** key moments using AI.
+    - **Generates** clips with FFMPEG, adding animated, audio-synced subtitles.
+4. **Storage & Database:** The final clips are uploaded back to S3, and the video's status and clip information are updated in our database (managed via Prisma).
+5. **Payments (Stripe):** Clipper uses a credit-based system. Users can purchase credits via Stripe, and each generated clip deducts from their credit balance.
+
+## Why These Technologies?
+
+### Next.js
+- Server-Side Rendering (SSR) for fast load times.
+- API routes for seamless backend integration.
+### Inngest
+- Efficient event-driven architecture for background processing.
+### Modal
+- Serverless GPU backend for high-performance video processing.
+### FFMPEG
+- Industry-standard tool for video editing and subtitle generation.
+### Stripe
+- Secure and reliable payment processing.
+### PostgreSQL & Prisma
+- Robust database management with type safety and scalability.
+
+## Challenges and Learnings
+
+Building Clipper in just 24 hours was no small feat. While we successfully built a robust solution, the intense hackathon environment presented unique challenges:
+
+### The Deployment Sprint
+The final hour of the hackathon was a true test of our agility. We faced significant hurdles in deploying the frontend, backend, and messaging queues across different platforms and ensuring seamless integration. This simultaneous deployment caused numerous errors and ultimately prevented us from getting everything online precisely on schedule.
+
+### Iterative Deployment: A Key Lesson
+From this experience, we learned a crucial lesson: the power of iterative deployment. Instead of a "big bang" release at the very end, we realized the importance of deploying features or completed parts of the system immediately after they are finished. This approach allows for earlier detection of integration issues and ensures that the system components work together effectively as they are built.
+
+Despite these challenges, the project was a resounding success, showcasing the potential of AI and modern web technologies.
+
+### Visual Diagrams
+
+*(These diagrams illustrate the core workflows of the application.)*
+
+**Clip Creation Flow:**  
+![image](https://github.com/user-attachments/assets/80503595-9c6c-4c5c-aeb4-4a67d99514de)
+
+**Queue System with Inngest:**  
+![image](https://github.com/user-attachments/assets/7cbb228a-bd8b-46f9-9e46-af79f0e14184)
+
+**Serverless GPU Backend with Modal:**  
+![image](https://github.com/user-attachments/assets/f250c6fe-1755-472b-8c92-b91b11f36c13)
+
+**Stripe Purchase Flow:**  
+![image](https://github.com/user-attachments/assets/ba06cfb8-c0bd-4fb9-a03d-1098f4224c59)
+
+---
+
+## Final Thoughts
+Clipper 🎬 is more than just a tool—it&apos;s a game-changer for content creators. By automating the tedious process of creating short-form videos, it empowers creators to focus on their passion and reach wider audiences. Whether you’re a podcaster, a YouTuber, or a social media influencer, Clipper is here to make your life easier.
+
+If you want to check out Website or Full Code: 
+- [Clipper](https://clipper-ai-omega.vercel.app/) 
+- [GitHub Repo](https://github.com/Umanpatel/clipper)
+
+Built with ❤️ at Hack AI Toronto, Clipper is a testament to what&apos;s possible when innovation meets determination.
