@@ -135,6 +135,41 @@ export const DATA = {
       ],
       image: "/clipper.png",
     },
+
+    {
+      title: "Gitbuddy",
+      href: "https://github.com/0xadityaa/Gitbuddy",
+      dates: "Jun 2025",
+      active: true,
+      description:
+        "A Multi-Agent devtool that helps automate tedious tasks maintaining github repos. It can create and update Readmes, Dockerize the project for easy local dev, and generate a llm.txt file summarizing the version-controll history of project to pass on to other AI agents.",  
+      technologies: [
+        "Next.js",
+        "Supabase",
+        "Langchain",
+        "Gemini 2.5 Flash + 2.5Pro",
+        "Tailwind",
+        "ShadCN",
+      ],
+      links: [
+        {
+          type: "DevLog",
+          href: "https://devpost.com/software/gitbuddy-8feigv",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Website",
+          href: "https://gitbuddy-dev.lovable.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/0xadityaa/Gitbuddy",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/gitbuddy.png",
+    },
     {
       title: "React Rooks",
       href: "https://github.com/Umanpatel/React-Rooks",
