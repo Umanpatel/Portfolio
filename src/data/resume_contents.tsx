@@ -78,6 +78,17 @@ export const DATA = {
       description:
         "Developed a job portal using an agile software development lifecycle. Leveraged Supabase as a backend to deliver instant alerts and facilitate efficient matching of job seekers with ad-hoc roles (data entry, retail, warehouse) in their vicinity. This resulted in increased application rates and reduced hiring times.",
     },
+    {
+      company: "OmniMD Technologies",
+      href: "https://omnimd.com/",
+      location: "Toronto, ON",
+      title: "Associate Software Engineer & Data Analyst",
+      logoUrl: "",
+      start: "July 2021",
+      end: "Oct 2022",
+      description:
+        "Worked on a healthcare technology platform serving doctors, clinics, and medical practices across the United States. Contributed to modernizing a legacy monolithic application into a microservices-based architecture using Java, Spring Boot, React, and SQL. Developed RESTful APIs and backend services for patient registration, appointment scheduling, provider management, insurance claims, and billing. Worked on React frontend enhancements, bug fixes, and production support while integrating frontend components with backend APIs. Contributed to legacy application migration, data migration, and database validation to improve maintainability and scalability. Led a team of five SQL engineers during database development and migration activities. Developed SQL-based reports and Excel dashboards with charts to visualize patient health metrics and KPIs, including blood pressure and heart rate. Collaborated with cross-functional teams to troubleshoot issues, enhance application functionality, and support healthcare data-driven features.",
+    },
   ],
   education: [
     {
