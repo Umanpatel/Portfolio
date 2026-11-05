@@ -83,7 +83,7 @@ export const DATA = {
       href: "https://omnimd.com/",
       location: "Toronto, ON",
       title: "Associate Software Engineer & Data Analyst",
-      logoUrl: "",
+      logoUrl: "/OmniMD.png",
       start: "July 2021",
       end: "Oct 2022",
       description:
